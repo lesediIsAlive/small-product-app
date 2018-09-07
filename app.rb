@@ -10,7 +10,12 @@ class ProductApp < Sinatra::Base
     set :method_override, true
 
 
-    #instanciate Product
+
+    #Instantiate Product
+    #TO DO 
+    #Update the table to look like the table in app.rb, product_test_spec.rb and 
+    #product_feature_spec.rb
+    
     if ENV['RACK_ENV'] == 'test'
         Product.new()
         Product.connect(Database.test,String: "name", Float: "price")

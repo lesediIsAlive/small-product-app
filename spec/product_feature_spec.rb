@@ -1,9 +1,9 @@
-require('capybara/rspec')
+require 'capybara/rspec'
 require 'capybara/dsl'
 require 'rspec'
 require "spec_helper"
 require "./product"
-require('./app')
+require './app' 
 
 
 Capybara.app = ProductApp
@@ -11,7 +11,12 @@ Capybara.app = ProductApp
 
     before(:all) do
         Product.new
-        Product.connect(Database.test,String: "name", Float: "price")
+    #Instantiate Product
+    #TO DO 
+    #Update the table to look like the table in app.rb, product_test_spec.rb and 
+    #product_feature_spec.rb
+    
+        Product.connect(Database.test,VARYING: "name", Float: "price")
 
     end
 
